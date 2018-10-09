@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MedidorLoginNew.Data
 {
-    public class MedidorDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
-        public MedidorDbContext(DbContextOptions<MedidorDbContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

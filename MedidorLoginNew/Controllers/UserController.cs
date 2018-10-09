@@ -9,13 +9,19 @@ namespace MedidorLoginNew.Controllers
 {
     [Route("api/user")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : Controller
     {
         private readonly IIdentityService _identityService;
 
         public UserController(IIdentityService identityService)
         {
             _identityService = identityService;
+        }
+
+        [HttpGet("echo")]
+        public IActionResult Echo()
+        {
+            return Ok("Echo went alright");
         }
 
         [ValidateModel]
